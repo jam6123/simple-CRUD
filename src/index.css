@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+html {
+  --bg-color: rgb(230, 230, 230);
+  --shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  --accent: #662974;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 4px 10px;
+} 
+
+form {
+  background-color: var(--bg-color);
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  box-shadow: var(--shadow);
+}
+
+form input {
+  font-size: 1.4rem;
+  padding: 8px 20px;
+}
+
+form button {
+  border-radius: 0;
+  padding: 0 20px;
+  color: white;
+  background-color: var(--accent);
+}
+
+button:disabled {
+  cursor: default;
+}
+
+ul {
+  width: fit-content;
+  background-color: var(--bg-color);
+  padding: 20px 40px;
+  user-select: none;
+
+  box-shadow: var(--shadow);
+}
+
+li {
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+
+  counter-increment: my-awesome-counter;
+}
+
+li::before {
+  --size: 2rem;
+  content: counter(my-awesome-counter);
+  background: var(--accent);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  margin-right: 14px;
+  font-size: 12px;
+
+  display: grid;
+  place-content: center;
+}
+
+.li-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  flex: 1;
+}
+
+.li-content input {
+  font-size: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.btn-container {
+  margin-left: 20px;
+
+  display: flex;
+  gap: 20px;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+}
+
+.edit-btn {
+  background-color: transparent;
+  color: blue;
+}
+
+.update-btn {
+  background-color: green;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: transparent;
+}
+
+.edit-btn:hover,
+.cancel-btn:hover,
+.update-btn:hover,
+.delete-btn:hover {
+  opacity: .4;
+}
+
+
