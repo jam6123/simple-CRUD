@@ -111,7 +111,7 @@ function App() {
         <button>Add</button>
       </form>
       <ul>
-        {(todos.length === 0) && (<p style={{ color: 'gray' }}>Empty</p>)}
+        {(todos.length === 0) && (<p style={{ color: '#ababab', padding: '0 40px' }}>Empty</p>)}
         {todos.map(todo => (
           <li key={todo.id}>
             <div className="li-content">
@@ -131,7 +131,7 @@ function App() {
                 </>
               ) : (
                 <>
-                  {todo.title}
+                  <p>{todo.title}</p>
                   <div className="btn-container">
                     <button className="edit-btn" onClick={() => setTodoToEdit(todo)}>Edit</button>
                     <button className="delete-btn" onClick={() => handleDelete(todo.id)}>Delete</button>

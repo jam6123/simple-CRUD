@@ -58,9 +58,10 @@ button:disabled {
 }
 
 ul {
+  max-width: 60vw;
   width: fit-content;
   background-color: var(--bg-color);
-  padding: 20px 40px;
+  padding: 40px 0;
   user-select: none;
 
   box-shadow: var(--shadow);
@@ -68,6 +69,7 @@ ul {
 
 li {
   margin-bottom: 8px;
+  padding: 0 40px;
 
   display: flex;
   align-items: center;
@@ -92,12 +94,21 @@ li::before {
   place-content: center;
 }
 
+li:nth-child(odd) {
+  background-color: rgb(207, 207, 207);
+}
+
 .li-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   
   flex: 1;
+}
+
+.li-content p {
+  word-break: break-all;
+
 }
 
 .li-content input {
