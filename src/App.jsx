@@ -111,6 +111,7 @@ function App() {
         <button>Add</button>
       </form>
       <ul>
+        {(todos.length === 0) && (<p style={{ color: 'gray' }}>Empty</p>)}
         {todos.map(todo => (
           <li key={todo.id}>
             <div className="li-content">
